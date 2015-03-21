@@ -1,0 +1,44 @@
+CREATE TABLE usuarios(
+  id_usuario INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  nombre varchar(20),
+  apellidos varchar(30),
+  nick varchar(15) NOT NULL,
+  pass varchar(15) NOT NULL
+);
+
+CREATE TABLE estados(
+  id_estado INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  nombre varchar(20)
+);
+
+CREATE TABLE clientes(
+  id_cliente INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  id_estado int NOT NULL,
+  id_usuario int NOT NULL,
+  nombre varchar(20),
+  apellidos varchar(30),
+  FOREIGN KEY (id_estado) REFERENCES estados (id_estado),
+  FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+);
+
+CREATE TABLE folios(
+  id_folio INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  num_folio varchar(10),
+  id_cliente int NOT NULL,
+  FOREIGN KEY (id_cliente) REFERENCES clientes (id_cliente)
+);
+
+CREATE TABLE promesas(
+  id_promesa INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  fecha_pago date,
+  monto float,
+  id_folio int NOT NULL,
+  FOREIGN KEY (id_folio) REFERENCES folios (id_folio)
+);
+
+
+INSERT INTO estados (nombre) VALUES ('Aguascalientes'),('Baja California'),('Baja California Sur'),('Campeche'),('Chiapas'),('Chihuahua'),('Coahuila'),('Colima'),('DF'),('Durango'),('Edo México'),('Guanajuato'),('Guerrero'),('Hidalgo'),('Jalisco'),('Michoacán'),('Morelos'),('Nayarit'),('Nuevo León'),('Oaxaca'),('Puebla'),('Querétaro'),('Quintana Roo'),('San Luis Potosí'),('Sinaloa'),('Sonora'),('Tabasco'),('Tamaulipas'),('Tlaxcala'),('Veracruz'),('Yucatán'),('Zacatecas');
+
+INSERT INTO usuarios (nombre,apellidos,nick,pass) VALUES ('Edmundo','Castellanos','edmundo','castellanos'),('Claudia','Alarcon','klaus','alarcon'),('Arantza','Castellanos','arantza','castalarcon');
+
+

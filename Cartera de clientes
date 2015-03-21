@@ -1,0 +1,7 @@
+El proceso del administrador de cartera será el siguiente:
+
+El usuario deberá loguearse, una vez logueado, podrá visualizar los clientes que ya tiene agregados a su cartera.
+
+Al dar click a algún cliente, se mostrará el historial de los pagos que ha realizado el cliente seleccionado.
+
+Dentro del index deberá haber alguna opcion para ingresar ingresar, modificar o eliminar nuevos clientes.
