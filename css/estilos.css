@@ -1,0 +1,16 @@
+#respuesta {
+	
+	
+}
+.ventana_flotante {
+    background: #FFA73C;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px 6px 6px 6px;
+    bottom: 50px;
+    padding: 10px 0 0;
+    position: inherit;
+    text-align: center;
+    width: 400px;
+    z-index: 15;
+}
+

@@ -31,18 +31,6 @@
 							<td>&nbsp;</td>
 						</tr>
 						<tr>
-						<!-- ---- A PRUEBA----
-							<script type="text/javascript">
-								$(document).ready(function(){
-									$('button').on("click",function(){
-										var usuario,pass;
-										usuario = $('#txtUsuario').val();
-										pass = $('#txtPass').val();
-										if(usuario !	= "" && pass !="")
-									});
-								});
-							</script>
-						-->
 							<td colspan="2" align="center"><input type="submit" value="Enviar" name="enviar"/></td>
 						</tr>
 					</table>
@@ -50,7 +38,6 @@
 		</div>				
 			<?}
 		?>
-		
 	</body>
 </html>
 

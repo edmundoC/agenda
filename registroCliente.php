@@ -31,7 +31,7 @@
 	<body>
 		<h1>Registro de clientes</h1>
 		<div id="formulario">
-			<form id="registro" action="registrarCliente.php" method="post">
+			<form id="registro" action="operacionesCliente.php?=alta" method="post">
 				<label for="nombre">Nombre:</label><input id="txtNombre" type="text" name="nombre"/></br></br>
 				<label for="apellidos">Apellidos:</label><input id="txtApellidos" type="text" name="apellidos"/></br></br>
 				<label for="estado">Estado:</label>
